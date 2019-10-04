@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+
+	<script type="text/javascript">
+		var bucle=5;
+		var lista = new Array();
+
+		for (i=0;i<bucle; i++) {
+			lista [i] = prompt('introduce un número');
+		}
+		document.write(lista);
+		document.write('<br>');
+
+		var lista2 = new Array();
+		for (i=0;i<bucle; i++) {
+			var temp;
+			lista2.unshift(prompt('introduce un número'));
+		}
+		document.write(lista2);
+		document.write('<br>');
+		var ordenado=lista2.sort(function(a, b){return a - b});
+		document.write(ordenado);
+		document.write('<br>');
+
+		var lista3 = new Array();
+		for (i=0;i<bucle; i++) {
+			var temp;
+			lista3.push(prompt('introduce un número'));
+		}
+		document.write(lista3);
+		document.write('<br>');
+		document.write('<br>');
+		//lista por join
+		document.write(lista.join(','));
+		document.write('<br>');
+		document.write(lista2.join(','));
+		document.write('<br>');
+		document.write(lista3.join(','));
+		document.write('<br>');
+		document.write('<br>');
+		//busqueda de un contenido en un array (devuelve el indice o posición del elemento en el array si existe)
+		//si devuelve -1 es que el elemento no lo ha encontrado
+		//en caso de borrar con valor -1 borra el elemento ultimo del array
+		var dias = ["lunes", "martes", "miercoles", "jueves"];
+		var index = dias.indexOf("miercoles");
+		document.write(`encontrado en la posición ${index}`)
+		document.write('<br>');		
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
